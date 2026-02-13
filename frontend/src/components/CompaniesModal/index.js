@@ -78,7 +78,7 @@ const CompanyModal = ({ open, onClose, companyId }) => {
 	const initialState = {
 		name: "",
 		email: "",
-		passwordDefault: "",
+		password: "",
 		numberAttendants: 1,
 		numberConections: 1,
 		status: false
@@ -192,12 +192,12 @@ const CompanyModal = ({ open, onClose, companyId }) => {
 								<div className={classes.multFieldLine}>
 									<Field
 										as={TextField}
-										name="passwordDefault"
+										name="password"
 										variant="outlined"
 										margin="dense"
 										label={i18n.t("companyModal.form.passwordDefault")}
-										error={touched.passwordDefault && Boolean(errors.passwordDefault)}
-										helperText={touched.passwordDefault && errors.passwordDefault}
+										error={touched.password && Boolean(errors.password)}
+										helperText={touched.password && errors.password}
 										type={showPassword ? 'text' : 'password'}
 										InputProps={{
 											endAdornment: (

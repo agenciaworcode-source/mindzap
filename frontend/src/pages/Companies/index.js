@@ -14,8 +14,10 @@ import TableRow from "@material-ui/core/TableRow";
 
 import MainContainer from "../../components/MainContainer";
 import MainHeader from "../../components/MainHeader";
-
+import MainHeaderButtonsWrapper from "../../components/MainHeaderButtonsWrapper";
 import Title from "../../components/Title";
+import { InputAdornment, TextField } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
 import api from "../../services/api";
 import { i18n } from "../../translate/i18n";
@@ -267,7 +269,7 @@ const Companies = () => {
             />
             <MainHeader>
                 <Title>{i18n.t("compaies.title")} ({companies.length})</Title>
-                {/* <MainHeaderButtonsWrapper>
+                <MainHeaderButtonsWrapper>
                     <TextField
                         placeholder={i18n.t("contacts.searchPlaceholder")}
                         type="search"
@@ -288,7 +290,7 @@ const Companies = () => {
                     >
                         {i18n.t("compaies.buttons.add")}
                     </Button>
-                </MainHeaderButtonsWrapper> */}
+                </MainHeaderButtonsWrapper>
             </MainHeader>
             <Paper
                 className={classes.mainPaper}
